@@ -5,7 +5,3 @@ import numpy as np
 
 #Example datasets
 ONES = pd.DataFrame(np.ones(10))
-
-#example funnction
-def increment(x):
-    return(x+1)
