@@ -2,7 +2,7 @@
 
 import pandas as pd
 import numpy as np
-from lambdata_niki import lambdata_nikibhatt as nb
+from lambdata_nikibhatt import df_utils as du
 
 #Example datasets
 ONES = pd.DataFrame(np.ones(10))
