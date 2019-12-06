@@ -18,7 +18,7 @@ class Product:
         elif ratio >= 0.5 and ratio < 1.0:
           message = 'Kinda stealable'
         else: message = 'Very stealable!'
-        print(message)
+        return message
 
     def explode(self):
         """ Check the explosiveness based on the flammability times the weight"""
@@ -28,4 +28,23 @@ class Product:
         elif prod >= 10 and prod < 50:
           message = '...boom!'
         else: message = '...BABOOM!!'
-        print(message)
+        return message
+
+class BoxingGlove(Product):
+    """ BoxingGlove Product details"""
+    def __init__(self, name, weight = 10):
+        self.name = name
+        super(BoxingGlove, self).__init__(self.name)
+        self.weight = weight
+
+    def explode(self):
+        """BoxingGlove explosiveness"""
+        return('...its a glove.')
+
+    def punch(self):
+        if self.weight < 5:
+            message = 'That tickles'
+        elif self.weight >= 5 and self.weight < 15:
+            message = 'Hey that hurt!'
+        else: message = 'OUCH!'
+        return message
