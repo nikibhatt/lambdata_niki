@@ -23,7 +23,7 @@ class Product:
         return message
 
     def explode(self):
-        """ Check the explosiveness based on the flammability times the weight"""
+        """ Check the explosiveness based on the flammability and weight"""
         prod = self.flammability * self.weight
         if prod < 10:
             message = '...fizzle'

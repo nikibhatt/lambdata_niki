@@ -1,5 +1,5 @@
 
-#!/usr/bin/env python
+"""ACME Reports""""
 
 from random import randint, sample, uniform, choice
 from acme import Product
@@ -26,19 +26,20 @@ def inventory_report(list):
     print('Number of products: ', len(list))
     sum_price = 0
     for obj in list:
-      sum_price += obj.price
-      ave_price = sum_price/len(list)
+        sum_price += obj.price
+        ave_price = sum_price/len(list)
     print('Average price: ', ave_price)
     sum_weight = 0
     for obj in list:
-      sum_weight += obj.weight
-      ave_weight = sum_weight/len(list)
+        sum_weight += obj.weight
+        ave_weight = sum_weight/len(list)
     print('Average weight: ', ave_weight)
     sum_flammability = 0
     for obj in list:
-      sum_flammability += obj.flammability
-      ave_flammability = sum_flammability/len(list)
+        sum_flammability += obj.flammability
+        ave_flammability = sum_flammability/len(list)
     print('Average flammability: ', ave_flammability)
+
 
 if __name__ == '__main__':
     inventory_report(generate_products())
